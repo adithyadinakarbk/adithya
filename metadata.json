@@ -1,0 +1,6 @@
+{
+  "name": "Academic Precision - Course Specification & Accreditation",
+  "description": "Authoritative course syllabus authoring, Outcome-Based Education (OBE) mapping matrix, Bloom's taxonomy alignment, and accreditation compliance board.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,318 @@
+{
+  "annexure": "Annexure A - Accreditation Framework & OBE Standards",
+  "version": "2025.1",
+  "institution": "Accredited Board of Engineering & Technology",
+  "programOutcomes": [
+    {
+      "id": "PO1",
+      "code": "PO1",
+      "title": "Engineering Knowledge",
+      "shortName": "Eng. Knowledge",
+      "description": "Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialization to the solution of complex engineering problems.",
+      "category": "Foundational Knowledge",
+      "targetAttainment": 2.5
+    },
+    {
+      "id": "PO2",
+      "code": "PO2",
+      "title": "Problem Analysis",
+      "shortName": "Prob. Analysis",
+      "description": "Identify, formulate, review research literature, and analyze complex engineering problems reaching substantiated conclusions using first principles of mathematics, natural sciences, and engineering sciences.",
+      "category": "Core Competency",
+      "targetAttainment": 2.5
+    },
+    {
+      "id": "PO3",
+      "code": "PO3",
+      "title": "Design/Development of Solutions",
+      "shortName": "Design Solutions",
+      "description": "Design solutions for complex engineering problems and design system components or processes that meet the specified needs with appropriate consideration for public health and safety, and cultural, societal, and environmental considerations.",
+      "category": "Core Competency",
+      "targetAttainment": 2.4
+    },
+    {
+      "id": "PO4",
+      "code": "PO4",
+      "title": "Conduct Investigations of Complex Problems",
+      "shortName": "Investigation",
+      "description": "Use research-based knowledge and research methods including design of experiments, analysis and interpretation of data, and synthesis of the information to provide valid conclusions.",
+      "category": "Investigation",
+      "targetAttainment": 2.2
+    },
+    {
+      "id": "PO5",
+      "code": "PO5",
+      "title": "Modern Tool Usage",
+      "shortName": "Modern Tools",
+      "description": "Create, select, and apply appropriate techniques, resources, and modern engineering and IT tools including prediction and modeling to complex engineering activities with an understanding of the limitations.",
+      "category": "Tools & Tech",
+      "targetAttainment": 2.6
+    },
+    {
+      "id": "PO6",
+      "code": "PO6",
+      "title": "The Engineer and Society",
+      "shortName": "Eng. & Society",
+      "description": "Apply reasoning informed by the contextual knowledge to assess societal, health, safety, legal and cultural issues and the consequent responsibilities relevant to the professional engineering practice.",
+      "category": "Society & Ethics",
+      "targetAttainment": 2.0
+    },
+    {
+      "id": "PO7",
+      "code": "PO7",
+      "title": "Environment and Sustainability",
+      "shortName": "Sustainability",
+      "description": "Understand the impact of the professional engineering solutions in societal and environmental contexts, and demonstrate the knowledge of, and need for sustainable development.",
+      "category": "Society & Ethics",
+      "targetAttainment": 2.0
+    },
+    {
+      "id": "PO8",
+      "code": "PO8",
+      "title": "Ethics",
+      "shortName": "Prof. Ethics",
+      "description": "Apply ethical principles and commit to professional ethics and responsibilities and norms of the engineering practice.",
+      "category": "Professional Skills",
+      "targetAttainment": 2.4
+    },
+    {
+      "id": "PO9",
+      "code": "PO9",
+      "title": "Individual and Team Work",
+      "shortName": "Teamwork",
+      "description": "Function effectively as an individual, and as a member or leader in diverse teams, and in multidisciplinary settings.",
+      "category": "Professional Skills",
+      "targetAttainment": 2.5
+    },
+    {
+      "id": "PO10",
+      "code": "PO10",
+      "title": "Communication",
+      "shortName": "Communication",
+      "description": "Communicate effectively on complex engineering activities with the engineering community and with society at large, such as, being able to comprehend and write effective reports and design documentation, make effective presentations, and give and receive clear instructions.",
+      "category": "Professional Skills",
+      "targetAttainment": 2.6
+    },
+    {
+      "id": "PO11",
+      "code": "PO11",
+      "title": "Project Management and Finance",
+      "shortName": "Project Mgmt",
+      "description": "Demonstrate knowledge and understanding of the engineering and management principles and apply these to one's own work, as a member and leader in a team, to manage projects and in multidisciplinary environments.",
+      "category": "Management",
+      "targetAttainment": 2.2
+    },
+    {
+      "id": "PO12",
+      "code": "PO12",
+      "title": "Life-long Learning",
+      "shortName": "Life-long Learning",
+      "description": "Recognize the need for, and have the preparation and ability to engage in independent and life-long learning in the broadest context of technological change.",
+      "category": "Self-Development",
+      "targetAttainment": 2.5
+    }
+  ],
+  "programSpecificOutcomes": [
+    {
+      "id": "PSO1",
+      "code": "PSO1",
+      "title": "Core Technical & Algorithmic Competency",
+      "shortName": "Algorithms & Systems",
+      "description": "Design, develop, and analyze algorithmic computations, data architectures, and software systems to solve real-world engineering challenges efficiently.",
+      "department": "Computer Science & Engineering",
+      "targetAttainment": 2.5
+    },
+    {
+      "id": "PSO2",
+      "code": "PSO2",
+      "title": "Modern Software & Platform Engineering",
+      "shortName": "Software Engineering",
+      "description": "Build robust, secure, and distributed software systems applying contemporary full-stack, cloud architectures, and modern DevOps/CI tool pipelines.",
+      "department": "Computer Science & Engineering",
+      "targetAttainment": 2.4
+    },
+    {
+      "id": "PSO3",
+      "code": "PSO3",
+      "title": "Intelligent Systems & Applied AI/ML",
+      "shortName": "AI & Data Science",
+      "description": "Apply machine learning, artificial intelligence, and data analytics principles to synthesize unstructured data and develop intelligent automated solutions.",
+      "department": "Computer Science & Engineering",
+      "targetAttainment": 2.3
+    }
+  ],
+  "bloomsLevels": [
+    {
+      "level": "L1",
+      "name": "Remember",
+      "cognitiveDomain": "Knowledge Retrieval",
+      "description": "Exhibit memory of previously learned materials by recalling facts, terms, basic concepts, and answers.",
+      "actionVerbs": [
+        "Define",
+        "Describe",
+        "Identify",
+        "List",
+        "Match",
+        "Name",
+        "Recall",
+        "Recognize",
+        "State"
+      ],
+      "color": "#64748B",
+      "badgeBg": "#F1F5F9"
+    },
+    {
+      "level": "L2",
+      "name": "Understand",
+      "cognitiveDomain": "Comprehension",
+      "description": "Demonstrate understanding of facts and ideas by organizing, comparing, translating, interpreting, giving descriptions, and stating main ideas.",
+      "actionVerbs": [
+        "Classify",
+        "Convert",
+        "Defend",
+        "Discuss",
+        "Distinguish",
+        "Estimate",
+        "Explain",
+        "Generalize",
+        "Give examples",
+        "Infer",
+        "Paraphrase",
+        "Predict",
+        "Summarize"
+      ],
+      "color": "#0284C7",
+      "badgeBg": "#E0F2FE"
+    },
+    {
+      "level": "L3",
+      "name": "Apply",
+      "cognitiveDomain": "Application",
+      "description": "Solve problems to new situations by applying acquired knowledge, facts, techniques and rules in a different way.",
+      "actionVerbs": [
+        "Apply",
+        "Calculate",
+        "Change",
+        "Choose",
+        "Compute",
+        "Demonstrate",
+        "Discover",
+        "Implement",
+        "Modify",
+        "Operate",
+        "Practice",
+        "Solve",
+        "Use"
+      ],
+      "color": "#0F9D8A",
+      "badgeBg": "#CCFBF1"
+    },
+    {
+      "level": "L4",
+      "name": "Analyze",
+      "cognitiveDomain": "Analysis",
+      "description": "Examine and break information into parts by identifying motives or causes; make inferences and find evidence to support generalizations.",
+      "actionVerbs": [
+        "Analyze",
+        "Appraise",
+        "Breakdown",
+        "Compare",
+        "Contrast",
+        "Diagram",
+        "Deconstruct",
+        "Differentiate",
+        "Discriminate",
+        "Distinguish",
+        "Examine",
+        "Experiment",
+        "Illustrate",
+        "Outline",
+        "Relate",
+        "Select",
+        "Separate"
+      ],
+      "color": "#D97706",
+      "badgeBg": "#FEF3C7"
+    },
+    {
+      "level": "L5",
+      "name": "Evaluate",
+      "cognitiveDomain": "Evaluation",
+      "description": "Present and defend opinions by making judgments about information, validity of ideas, or quality of work based on a set of criteria.",
+      "actionVerbs": [
+        "Appraise",
+        "Argue",
+        "Assess",
+        "Choose",
+        "Compare",
+        "Conclude",
+        "Criticize",
+        "Critique",
+        "Decide",
+        "Defend",
+        "Evaluate",
+        "Judge",
+        "Justify",
+        "Measure",
+        "Rate",
+        "Recommend",
+        "Support",
+        "Validate"
+      ],
+      "color": "#7C3AED",
+      "badgeBg": "#EDE9FE"
+    },
+    {
+      "level": "L6",
+      "name": "Create",
+      "cognitiveDomain": "Synthesis & Creation",
+      "description": "Compile information together in a different way by combining elements in a new pattern or proposing alternative solutions.",
+      "actionVerbs": [
+        "Assemble",
+        "Build",
+        "Categorize",
+        "Combine",
+        "Compile",
+        "Compose",
+        "Construct",
+        "Create",
+        "Design",
+        "Devise",
+        "Formulate",
+        "Generate",
+        "Integrate",
+        "Plan",
+        "Produce",
+        "Synthesize"
+      ],
+      "color": "#E11D48",
+      "badgeBg": "#FFE4E6"
+    }
+  ],
+  "correlationScale": [
+    {
+      "level": 0,
+      "symbol": "-",
+      "label": "No Correlation",
+      "description": "The course outcome does not substantially contribute to this program outcome."
+    },
+    {
+      "level": 1,
+      "symbol": "1",
+      "label": "Low / Slight",
+      "description": "CLO addresses the PO peripherally (up to 30% emphasis in syllabus and evaluation)."
+    },
+    {
+      "level": 2,
+      "symbol": "2",
+      "label": "Medium / Moderate",
+      "description": "CLO addresses the PO moderately (30% to 60% emphasis in syllabus and evaluation)."
+    },
+    {
+      "level": 3,
+      "symbol": "3",
+      "label": "High / Substantial",
+      "description": "CLO directly and substantially delivers and measures this PO (>60% emphasis in syllabus and evaluation)."
+    }
+  ]
+}

@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CS401 - Design and Analysis of Algorithms - Course Specification</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap');
+    
+    :root {
+      --primary: #1E3A5F;
+      --secondary: #0F9D8A;
+      --text-main: #1F2937;
+      --text-slate: #64748B;
+      --border: #CBD5E1;
+      --bg-light: #F8FAFC;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: var(--text-main);
+      background-color: #F1F5F9;
+      padding: 24px;
+      line-height: 1.5;
+    }
+
+    .toolbar {
+      max-width: 900px;
+      margin: 0 auto 16px auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #FFFFFF;
+      padding: 12px 20px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+    }
+
+    .btn-print {
+      background: var(--primary);
+      color: #FFFFFF;
+      border: none;
+      padding: 8px 16px;
+      font-size: 13px;
+      font-weight: 600;
+      border-radius: 4px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-print:hover {
+      background: #152A45;
+    }
+
+    .doc-sheet {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 48px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    }
+
+    .header-block {
+      text-align: center;
+      padding-bottom: 24px;
+      border-bottom: 3px solid var(--primary);
+      margin-bottom: 24px;
+    }
+
+    .header-block h1 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .header-block h2 {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-slate);
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+
+    .header-block .meta {
+      font-size: 11px;
+      font-family: monospace;
+      color: #64748B;
+      margin-top: 4px;
+    }
+
+    .badge-docket {
+      display: inline-block;
+      margin-top: 10px;
+      background: var(--primary);
+      color: #FFFFFF;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 3px;
+    }
+
+    .section-title {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid #E2E8F0;
+      margin-top: 24px;
+      margin-bottom: 12px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+      margin-bottom: 12px;
+    }
+
+    th, td {
+      border: 1px solid var(--border);
+      padding: 8px 10px;
+      vertical-align: top;
+    }
+
+    th {
+      background: var(--bg-light);
+      color: var(--text-main);
+      font-weight: 700;
+    }
+
+    .table-dark th {
+      background: var(--primary);
+      color: #FFFFFF;
+      border-color: #0F2D52;
+    }
+
+    .tabular-nums {
+      font-variant-numeric: tabular-nums;
+      font-family: monospace;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    .co-code {
+      font-family: monospace;
+      font-weight: bold;
+      color: var(--primary);
+    }
+
+    ol, ul {
+      padding-left: 20px;
+      font-size: 12px;
+      color: #334155;
+    }
+
+    li {
+      margin-bottom: 6px;
+      line-height: 1.5;
+    }
+
+    .unit-card {
+      margin-bottom: 14px;
+      font-size: 12px;
+    }
+
+    .unit-header {
+      font-weight: bold;
+      color: var(--primary);
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid #CBD5E1;
+      padding-bottom: 3px;
+      margin-bottom: 4px;
+    }
+
+    .unit-body {
+      color: #334155;
+      margin-bottom: 4px;
+    }
+
+    .unit-meta {
+      font-size: 11px;
+      color: #64748B;
+    }
+
+    .signatures {
+      margin-top: 36px;
+      padding-top: 24px;
+      border-top: 2px solid var(--primary);
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      text-align: center;
+      font-size: 12px;
+    }
+
+    .sig-line {
+      height: 40px;
+      border-bottom: 1px dashed #CBD5E1;
+      margin-bottom: 8px;
+    }
+
+    .sig-name {
+      font-weight: bold;
+      color: var(--text-main);
+    }
+
+    .sig-title {
+      font-size: 11px;
+      color: var(--text-slate);
+    }
+
+    @media print {
+      body {
+        background: #FFFFFF;
+        padding: 0;
+      }
+      .toolbar {
+        display: none !important;
+      }
+      .doc-sheet {
+        border: none;
+        box-shadow: none;
+        padding: 0;
+        max-width: 100%;
+      }
+      .page-break {
+        page-break-before: always;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Action Bar (Hidden on print) -->
+  <div class="toolbar">
+    <div>
+      <strong style="color: #1E3A5F; font-size: 14px;">SpecForge Specification Document</strong>
+      <span style="font-size: 12px; color: #64748B; margin-left: 8px;">CS401 • Autonomous R22</span>
+    </div>
+    <button class="btn-print" onclick="window.print()">
+      🖨️ Print / Save to PDF
+    </button>
+  </div>
+
+  <!-- Document Sheet -->
+  <div class="doc-sheet">
+    
+    <!-- Header Block -->
+    <div class="header-block">
+      <h1>College of Engineering & Technology</h1>
+      <h2>Department of Computer Science & Engineering</h2>
+      <div class="meta">Autonomous R22 Regulation • Outcome-Based Education (OBE) Tier-1</div>
+      <div class="badge-docket">Official Course Specification Docket</div>
+    </div>
+
+    <!-- 1. Identification & Credits -->
+    <div class="section-title">1. Course Identification & Credit Allocation</div>
+    <table>
+      <tbody>
+        <tr>
+          <th style="width: 25%;">Course Code & Title</th>
+          <td colspan="3"><strong style="color: #1E3A5F;">CS401 — Design and Analysis of Algorithms</strong></td>
+        </tr>
+        <tr>
+          <th>Academic Year & Sem</th>
+          <td>2025-2026 • Semester IV</td>
+          <th style="width: 25%;">Category</th>
+          <td>Professional Core Course (PCC)</td>
+        </tr>
+        <tr>
+          <th>L - T - P Structure</th>
+          <td class="tabular-nums">L: 3 | T: 1 | P: 0 hrs/wk</td>
+          <th>Total Credits & Hours</th>
+          <td class="tabular-nums"><strong style="color: #0F9D8A;">4.0 Credits (60 Contact Hours)</strong></td>
+        </tr>
+        <tr>
+          <th>Prerequisites</th>
+          <td colspan="3">CS201 Data Structures, MA102 Discrete Mathematics</td>
+        </tr>
+        <tr>
+          <th>Course Coordinator</th>
+          <td colspan="3">Dr. Evelyn Vasquez, Associate Professor</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- 2. Course Educational Objectives -->
+    <div class="section-title">2. Course Educational Objectives (CEOs)</div>
+    <ol>
+      <li>To analyze the asymptotic performance of classical and modern computer algorithms.</li>
+      <li>To demonstrate proficiency in applying divide-and-conquer, greedy, and dynamic programming paradigms.</li>
+      <li>To synthesize graph-theoretic models for network flow and traversal optimization.</li>
+      <li>To understand complexity hierarchies, tractability, and polynomial-time reductions for NP-Complete problems.</li>
+    </ol>
+
+    <!-- 3. Course Learning Outcomes -->
+    <div class="section-title">3. Course Learning Outcomes (CLOs / COs)</div>
+    <table class="table-dark">
+      <thead>
+        <tr>
+          <th style="width: 60px;">CO #</th>
+          <th>Outcome Statement</th>
+          <th style="width: 110px;" class="center">Bloom Level</th>
+          <th style="width: 80px;" class="center">Attainment</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="co-code center">CO1</td>
+          <td>Explain asymptotic complexity notations, recurrence relations, and algorithmic efficiency models across best, average, and worst-case bounds.</td>
+          <td class="center tabular-nums">L2 (Understand)</td>
+          <td class="center tabular-nums">75%</td>
+        </tr>
+        <tr>
+          <td class="co-code center">CO2</td>
+          <td>Apply divide-and-conquer, greedy selection, and dynamic programming techniques to solve constrained algorithmic optimization problems.</td>
+          <td class="center tabular-nums">L3 (Apply)</td>
+          <td class="center tabular-nums">70%</td>
+        </tr>
+        <tr>
+          <td class="co-code center">CO3</td>
+          <td>Analyze minimum spanning tree, shortest path, and maximum network flow algorithms on sparse and dense graph topologies.</td>
+          <td class="center tabular-nums">L4 (Analyze)</td>
+          <td class="center tabular-nums">70%</td>
+        </tr>
+        <tr>
+          <td class="co-code center">CO4</td>
+          <td>Differentiate polynomial vs non-deterministic polynomial problem classes (P, NP, NP-Complete) using formal reduction proofs.</td>
+          <td class="center tabular-nums">L4 (Analyze)</td>
+          <td class="center tabular-nums">65%</td>
+        </tr>
+        <tr>
+          <td class="co-code center">CO5</td>
+          <td>Evaluate randomized and approximation heuristics for computationally intractable NP-hard combinatorial bottlenecks.</td>
+          <td class="center tabular-nums">L5 (Evaluate)</td>
+          <td class="center tabular-nums">60%</td>
+        </tr>
+        <tr>
+          <td class="co-code center">CO6</td>
+          <td>Design branch-and-bound and state-space search architectures for high-dimensional computational decision systems.</td>
+          <td class="center tabular-nums">L6 (Create)</td>
+          <td class="center tabular-nums">65%</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- 4. Articulation Matrix -->
+    <div class="section-title">4. Outcome Articulation Matrix (PO1 — PO12 & PSO1 — PSO3)</div>
+    <table>
+      <thead>
+        <tr style="background: #F1F5F9;">
+          <th style="width: 50px;">CO #</th>
+          <th>PO1</th><th>PO2</th><th>PO3</th><th>PO4</th><th>PO5</th><th>PO6</th>
+          <th>PO7</th><th>PO8</th><th>PO9</th><th>PO10</th><th>PO11</th><th>PO12</th>
+          <th style="background: #E0F2FE;">PSO1</th><th style="background: #E0F2FE;">PSO2</th><th style="background: #E0F2FE;">PSO3</th>
+        </tr>
+      </thead>
+      <tbody class="center tabular-nums">
+        <tr>
+          <td class="co-code">CO1</td>
+          <td>3</td><td>2</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>1</td><td>-</td><td>2</td>
+          <td>3</td><td>1</td><td>1</td>
+        </tr>
+        <tr>
+          <td class="co-code">CO2</td>
+          <td>3</td><td>3</td><td>3</td><td>2</td><td>1</td><td>-</td><td>-</td><td>-</td><td>-</td><td>1</td><td>-</td><td>2</td>
+          <td>3</td><td>2</td><td>2</td>
+        </tr>
+        <tr>
+          <td class="co-code">CO3</td>
+          <td>2</td><td>3</td><td>3</td><td>3</td><td>2</td><td>-</td><td>-</td><td>-</td><td>1</td><td>1</td><td>-</td><td>2</td>
+          <td>3</td><td>2</td><td>2</td>
+        </tr>
+        <tr>
+          <td class="co-code">CO4</td>
+          <td>3</td><td>3</td><td>2</td><td>3</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>1</td><td>-</td><td>3</td>
+          <td>3</td><td>1</td><td>1</td>
+        </tr>
+        <tr>
+          <td class="co-code">CO5</td>
+          <td>2</td><td>3</td><td>3</td><td>3</td><td>2</td><td>1</td><td>-</td><td>-</td><td>1</td><td>1</td><td>1</td><td>3</td>
+          <td>3</td><td>2</td><td>3</td>
+        </tr>
+        <tr>
+          <td class="co-code">CO6</td>
+          <td>2</td><td>3</td><td>3</td><td>2</td><td>2</td><td>-</td><td>-</td><td>-</td><td>1</td><td>2</td><td>1</td><td>3</td>
+          <td>3</td><td>3</td><td>2</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr style="background: #EFF4FF; font-weight: bold;" class="center tabular-nums">
+          <td>Avg</td>
+          <td>2.50</td><td>2.83</td><td>2.80</td><td>2.60</td><td>1.75</td><td>1.00</td><td>-</td><td>-</td><td>1.00</td><td>1.17</td><td>1.00</td><td>2.50</td>
+          <td>3.00</td><td>1.83</td><td>1.83</td>
+        </tr>
+      </tfoot>
+    </table>
+    <p style="font-size: 10px; color: #64748B; font-style: italic; margin-bottom: 16px;">
+      Correlation Scale: 1 - Slight / Low, 2 - Moderate / Medium, 3 - Substantial / High.
+    </p>
+
+    <!-- 5. Modular Syllabus -->
+    <div class="section-title">5. Modular Syllabus Outline</div>
+    
+    <div class="unit-card">
+      <div class="unit-header">
+        <span>UNIT I: INTRODUCTION & ASYMPTOTIC ANALYSIS</span>
+        <span class="tabular-nums">12 Contact Hours</span>
+      </div>
+      <div class="unit-body">
+        Order Notation (O, Omega, Theta), Master Theorem, Substitution Method, Recursion Tree, Recurrences, Amortized Analysis (Accounting & Potential Methods).
+      </div>
+      <div class="unit-meta"><strong>Mapped CO:</strong> CO1 | <strong>Pedagogy:</strong> Chalk & Talk, Interactive Slides, Proof Workshop</div>
+    </div>
+
+    <div class="unit-card">
+      <div class="unit-header">
+        <span>UNIT II: DIVIDE & CONQUER AND GREEDY PARADIGMS</span>
+        <span class="tabular-nums">12 Contact Hours</span>
+      </div>
+      <div class="unit-body">
+        Strassen Matrix Multiplication, Convex Hull, Greedy Choice Property, Optimal Substructure, Fractional Knapsack, Huffman Coding, Job Sequencing with Deadlines.
+      </div>
+      <div class="unit-meta"><strong>Mapped CO:</strong> CO2 | <strong>Pedagogy:</strong> Chalk & Talk, Algorithm Visualization Demo, Peer Code Walkthrough</div>
+    </div>
+
+    <div class="unit-card">
+      <div class="unit-header">
+        <span>UNIT III: DYNAMIC PROGRAMMING & GRAPH ALGORITHMS</span>
+        <span class="tabular-nums">12 Contact Hours</span>
+      </div>
+      <div class="unit-body">
+        Matrix Chain Multiplication, Longest Common Subsequence (LCS), 0/1 Knapsack, Bellman-Ford, Floyd-Warshall, Johnson Algorithm, Maximum Bipartite Matching, Ford-Fulkerson.
+      </div>
+      <div class="unit-meta"><strong>Mapped COs:</strong> CO2, CO3 | <strong>Pedagogy:</strong> Visual Simulation, Problem-Based Learning Group Activity</div>
+    </div>
+
+    <div class="unit-card">
+      <div class="unit-header">
+        <span>UNIT IV: TRACTABILITY & NP-COMPLETENESS</span>
+        <span class="tabular-nums">12 Contact Hours</span>
+      </div>
+      <div class="unit-body">
+        Deterministic vs Non-deterministic Turing Machines, Polynomial Reductions, Cook-Levin Theorem, Satisfiability (3-SAT), Clique, Vertex Cover, Hamiltonian Cycle, TSP.
+      </div>
+      <div class="unit-meta"><strong>Mapped CO:</strong> CO4 | <strong>Pedagogy:</strong> Chalk & Talk, Case Studies in Intractability, Socratic Seminar</div>
+    </div>
+
+    <div class="unit-card">
+      <div class="unit-header">
+        <span>UNIT V: APPROXIMATION, RANDOMIZED & BRANCH-AND-BOUND</span>
+        <span class="tabular-nums">12 Contact Hours</span>
+      </div>
+      <div class="unit-body">
+        Approximation Ratio, Vertex Cover 2-Approximation, Metric TSP, Random Treaps, Quickselect Expected Bounds, Branch and Bound LC-Search, 15-Puzzle Problem, Assignment Problem.
+      </div>
+      <div class="unit-meta"><strong>Mapped COs:</strong> CO5, CO6 | <strong>Pedagogy:</strong> Interactive Benchmark Coding, Research Paper Seminar</div>
+    </div>
+
+    <!-- 6. Assessment Pattern -->
+    <div class="section-title">6. Assessment & Evaluation Scheme</div>
+    <table>
+      <thead>
+        <tr>
+          <th>Assessment Component</th>
+          <th style="width: 80px;" class="center">Category</th>
+          <th style="width: 110px;" class="center">Mapped COs</th>
+          <th style="width: 90px;" class="center">Weightage</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Continuous Assessment Test 1 (CAT-I)</td>
+          <td class="center tabular-nums">CIE</td>
+          <td class="center tabular-nums">CO1, CO2</td>
+          <td class="center tabular-nums">20 Marks</td>
+        </tr>
+        <tr>
+          <td>Continuous Assessment Test 2 (CAT-II)</td>
+          <td class="center tabular-nums">CIE</td>
+          <td class="center tabular-nums">CO3, CO4</td>
+          <td class="center tabular-nums">20 Marks</td>
+        </tr>
+        <tr>
+          <td>Algorithm Implementation Lab Project & Quiz</td>
+          <td class="center tabular-nums">CIE</td>
+          <td class="center tabular-nums">CO2, CO5, CO6</td>
+          <td class="center tabular-nums">10 Marks</td>
+        </tr>
+        <tr>
+          <td>Comprehensive Semester End Examination (SEE)</td>
+          <td class="center tabular-nums">SEE</td>
+          <td class="center tabular-nums">CO1 — CO6</td>
+          <td class="center tabular-nums">50 Marks</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr style="background: #EFF4FF; font-weight: bold;">
+          <td colspan="3" style="text-align: right;">Total Evaluated Weightage</td>
+          <td class="center tabular-nums" style="color: #0F9D8A;">100 Marks</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <!-- 7. Prescribed Textbooks & References -->
+    <div class="section-title">7. Prescribed Textbooks & References</div>
+    <ol>
+      <li><strong>Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein</strong>, <em>"Introduction to Algorithms"</em>, 4th Edition, MIT Press, 2022 (ISBN: 978-0262046305). <span style="color: #0F9D8A; font-weight: bold;">[Prescribed]</span></li>
+      <li><strong>Jon Kleinberg, Éva Tardos</strong>, <em>"Algorithm Design"</em>, 1st Edition, Pearson, 2014 (ISBN: 978-0321295354). <span style="color: #0F9D8A; font-weight: bold;">[Prescribed]</span></li>
+      <li><strong>Ellis Horowitz, Sartaj Sahni, Sanguthevar Rajasekaran</strong>, <em>"Fundamentals of Computer Algorithms"</em>, 2nd Edition, Universities Press, 2018.</li>
+    </ol>
+
+    <!-- 8. Signatures Block -->
+    <div class="signatures">
+      <div>
+        <div class="sig-line"></div>
+        <div class="sig-name">Dr. Evelyn Vasquez</div>
+        <div class="sig-title">Course Coordinator</div>
+      </div>
+      <div>
+        <div class="sig-line"></div>
+        <div class="sig-name">Prof. Marcus Brody</div>
+        <div class="sig-title">Head of Department (HOD)</div>
+      </div>
+      <div>
+        <div class="sig-line"></div>
+        <div class="sig-name">Dr. Alistair Finch</div>
+        <div class="sig-title">Dean of Academic Affairs</div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
