@@ -57,7 +57,25 @@ export const ExportScreen: React.FC<ExportScreenProps> = ({ course, onBack }) =>
     dlAnchorElem.click();
   };
 
-  const handleDownloadHTML = () => {
+  const handleDownloadHTML = async () => {
+    try {
+      const res = await fetch('/outputs/spec.html');
+      if (res.ok) {
+        const text = await res.text();
+        const blob = new Blob([text], { type: 'text/html;charset=utf-8' });
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'spec.html';
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        window.URL.revokeObjectURL(url);
+        return;
+      }
+    } catch {
+      // fallback
+    }
     window.open('/outputs/spec.html', '_blank');
   };
 
@@ -108,20 +126,20 @@ export const ExportScreen: React.FC<ExportScreenProps> = ({ course, onBack }) =>
               type="button"
               onClick={handleDownloadHTML}
               className="px-3.5 py-1.5 bg-[#143764] hover:bg-[#1E3A5F] text-white rounded text-xs font-medium flex items-center gap-1.5 transition-colors shadow-xs"
-              title="View & Download outputs/spec.html (20 Points)"
+              title="Download outputs/spec.html (20 Points) - Must be HTML format"
             >
               <FileCode className="w-3.5 h-3.5 text-[#80F3DD]" />
-              Open spec.html (20 pts)
+              Download spec.html (20 pts)
             </button>
 
             <button
               type="button"
               onClick={handlePrint}
               className="px-4 py-1.5 bg-[#1E3A5F] hover:bg-[#152A45] text-white rounded text-xs font-medium flex items-center gap-1.5 transition-colors shadow-xs"
-              title="Save document directly as PDF"
+              title="Save document directly as PDF for your own records"
             >
               <Printer className="w-3.5 h-3.5" />
-              Print / Save as PDF
+              Print / PDF
             </button>
           </div>
         </div>
@@ -137,7 +155,7 @@ export const ExportScreen: React.FC<ExportScreenProps> = ({ course, onBack }) =>
                 Ready for Portal Submission
               </h4>
               <p className="text-[11px] text-slate-600 dark:text-slate-300">
-                Both required files are generated in <code className="font-mono bg-white dark:bg-black/30 px-1 py-0.5 rounded text-[#006B5D] dark:text-[#80F3DD]">/outputs/</code> for your submission portal:
+                Card 1 requires <strong className="text-[#006B5D] dark:text-[#80F3DD]">specforge_output.json</strong>. Card 2 requires <strong className="text-[#006B5D] dark:text-[#80F3DD]">spec.html</strong> (upload as <code className="font-mono bg-amber-100 text-amber-900 px-1 rounded font-bold">.html</code>, NOT <code className="font-mono">.pdf</code>, to avoid server error).
               </p>
             </div>
           </div>
