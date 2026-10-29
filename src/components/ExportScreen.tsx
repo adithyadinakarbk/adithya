@@ -46,9 +46,35 @@ export const ExportScreen: React.FC<ExportScreenProps> = ({ course, onBack }) =>
 
     const payload = {
       input_id: "SAMPLE",
-      course_code: course.code,
-      course_title: course.title,
-      ...course
+      schema_version: "1.0.0",
+      template: "annexure_a",
+      course: {
+        code: course.code,
+        title: course.title,
+        department: course.department,
+        credits_ltp: `${course.lectureHours}-${course.tutorialHours}-${course.practicalHours}-${course.totalCredits}`,
+        course_type: course.category,
+        summary: `Comprehensive course on ${course.title} covering core algorithmic paradigms, complexity bounds, and OBE outcomes.`
+      },
+      course_outcomes: course.courseOutcomes.map(co => ({
+        id: co.code,
+        statement: co.statement,
+        bloom_level: co.bloomsLevel
+      })),
+      units: course.syllabusUnits.map(u => ({
+        unit_number: u.unitNumber,
+        title: u.title,
+        hours: u.lectureHours,
+        topics: u.topics
+      })),
+      co_po_pso_map: course.poMapping,
+      teaching_hours: course.totalContactHours,
+      assessment: {
+        cie: 50,
+        see: 50,
+        total: 100
+      },
+      defects: []
     };
     const dataStr = 'data:text/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(payload, null, 2));
     const dlAnchorElem = document.createElement('a');

@@ -1,603 +1,92 @@
 {
   "input_id": "SAMPLE",
-  "system": "SpecForge Academic Precision OBE Framework",
-  "version": "2.1",
-  "generatedAt": "2026-10-29T02:43:00Z",
-  "course_code": "CS401",
-  "course_title": "Design and Analysis of Algorithms",
-  "department": "Computer Science & Engineering",
-  "academic_year": "2025-2026",
-  "semester": "IV",
-  "regulation": "Autonomous R22 / OBE Tier-1",
-  "category": "Professional Core Course (PCC)",
-  "course_coordinator": "Dr. Evelyn Vasquez",
-  "credits": {
-    "lecture": 3,
-    "tutorial": 1,
-    "practical": 0,
-    "total": 4,
-    "totalCredits": 4,
-    "contactHours": 60
-  },
-  "prerequisites": [
-    "CS201 Data Structures",
-    "MA102 Discrete Mathematics"
-  ],
-  "objectives": [
-    "To analyze the asymptotic performance of classical and modern computer algorithms.",
-    "To demonstrate proficiency in applying divide-and-conquer, greedy, and dynamic programming paradigms.",
-    "To synthesize graph-theoretic models for network flow and traversal optimization.",
-    "To understand complexity hierarchies, tractability, and polynomial-time reductions for NP-Complete problems."
-  ],
-  "course_outcomes": [
-    {
-      "code": "CO1",
-      "bloomsLevel": "L2",
-      "actionVerb": "Explain",
-      "statement": "Explain asymptotic complexity notations, recurrence relations, and algorithmic efficiency models across best, average, and worst-case bounds.",
-      "expectedAttainment": 75,
-      "cognitiveDomain": "Comprehension"
-    },
-    {
-      "code": "CO2",
-      "bloomsLevel": "L3",
-      "actionVerb": "Apply",
-      "statement": "Apply divide-and-conquer, greedy selection, and dynamic programming techniques to solve constrained algorithmic optimization problems.",
-      "expectedAttainment": 70,
-      "cognitiveDomain": "Application"
-    },
-    {
-      "code": "CO3",
-      "bloomsLevel": "L4",
-      "actionVerb": "Analyze",
-      "statement": "Analyze minimum spanning tree, shortest path, and maximum network flow algorithms on sparse and dense graph topologies.",
-      "expectedAttainment": 70,
-      "cognitiveDomain": "Analysis"
-    },
-    {
-      "code": "CO4",
-      "bloomsLevel": "L4",
-      "actionVerb": "Differentiate",
-      "statement": "Differentiate polynomial vs non-deterministic polynomial problem classes (P, NP, NP-Complete) using formal reduction proofs.",
-      "expectedAttainment": 65,
-      "cognitiveDomain": "Analysis"
-    },
-    {
-      "code": "CO5",
-      "bloomsLevel": "L5",
-      "actionVerb": "Evaluate",
-      "statement": "Evaluate randomized and approximation heuristics for computationally intractable NP-hard combinatorial bottlenecks.",
-      "expectedAttainment": 60,
-      "cognitiveDomain": "Evaluation"
-    },
-    {
-      "code": "CO6",
-      "bloomsLevel": "L6",
-      "actionVerb": "Design",
-      "statement": "Design branch-and-bound and state-space search architectures for high-dimensional computational decision systems.",
-      "expectedAttainment": 65,
-      "cognitiveDomain": "Synthesis & Creation"
-    }
-  ],
-  "courseOutcomes": [
-    {
-      "code": "CO1",
-      "bloomsLevel": "L2",
-      "actionVerb": "Explain",
-      "statement": "Explain asymptotic complexity notations, recurrence relations, and algorithmic efficiency models across best, average, and worst-case bounds.",
-      "expectedAttainment": 75,
-      "cognitiveDomain": "Comprehension"
-    },
-    {
-      "code": "CO2",
-      "bloomsLevel": "L3",
-      "actionVerb": "Apply",
-      "statement": "Apply divide-and-conquer, greedy selection, and dynamic programming techniques to solve constrained algorithmic optimization problems.",
-      "expectedAttainment": 70,
-      "cognitiveDomain": "Application"
-    },
-    {
-      "code": "CO3",
-      "bloomsLevel": "L4",
-      "actionVerb": "Analyze",
-      "statement": "Analyze minimum spanning tree, shortest path, and maximum network flow algorithms on sparse and dense graph topologies.",
-      "expectedAttainment": 70,
-      "cognitiveDomain": "Analysis"
-    },
-    {
-      "code": "CO4",
-      "bloomsLevel": "L4",
-      "actionVerb": "Differentiate",
-      "statement": "Differentiate polynomial vs non-deterministic polynomial problem classes (P, NP, NP-Complete) using formal reduction proofs.",
-      "expectedAttainment": 65,
-      "cognitiveDomain": "Analysis"
-    },
-    {
-      "code": "CO5",
-      "bloomsLevel": "L5",
-      "actionVerb": "Evaluate",
-      "statement": "Evaluate randomized and approximation heuristics for computationally intractable NP-hard combinatorial bottlenecks.",
-      "expectedAttainment": 60,
-      "cognitiveDomain": "Evaluation"
-    },
-    {
-      "code": "CO6",
-      "bloomsLevel": "L6",
-      "actionVerb": "Design",
-      "statement": "Design branch-and-bound and state-space search architectures for high-dimensional computational decision systems.",
-      "expectedAttainment": 65,
-      "cognitiveDomain": "Synthesis & Creation"
-    }
-  ],
-  "articulation_matrix": {
-    "program_outcomes": {
-      "CO1": { "PO1": 3, "PO2": 2, "PO3": 0, "PO4": 0, "PO5": 0, "PO6": 0, "PO7": 0, "PO8": 0, "PO9": 0, "PO10": 1, "PO11": 0, "PO12": 2 },
-      "CO2": { "PO1": 3, "PO2": 3, "PO3": 3, "PO4": 2, "PO5": 1, "PO6": 0, "PO7": 0, "PO8": 0, "PO9": 0, "PO10": 1, "PO11": 0, "PO12": 2 },
-      "CO3": { "PO1": 2, "PO2": 3, "PO3": 3, "PO4": 3, "PO5": 2, "PO6": 0, "PO7": 0, "PO8": 0, "PO9": 1, "PO10": 1, "PO11": 0, "PO12": 2 },
-      "CO4": { "PO1": 3, "PO2": 3, "PO3": 2, "PO4": 3, "PO5": 0, "PO6": 0, "PO7": 0, "PO8": 0, "PO9": 0, "PO10": 1, "PO11": 0, "PO12": 3 },
-      "CO5": { "PO1": 2, "PO2": 3, "PO3": 3, "PO4": 3, "PO5": 2, "PO6": 1, "PO7": 0, "PO8": 0, "PO9": 1, "PO10": 1, "PO11": 1, "PO12": 3 },
-      "CO6": { "PO1": 2, "PO2": 3, "PO3": 3, "PO4": 2, "PO5": 2, "PO6": 0, "PO7": 0, "PO8": 0, "PO9": 1, "PO10": 2, "PO11": 1, "PO12": 3 }
-    },
-    "program_specific_outcomes": {
-      "CO1": { "PSO1": 3, "PSO2": 1, "PSO3": 1 },
-      "CO2": { "PSO1": 3, "PSO2": 2, "PSO3": 2 },
-      "CO3": { "PSO1": 3, "PSO2": 2, "PSO3": 2 },
-      "CO4": { "PSO1": 3, "PSO2": 1, "PSO3": 1 },
-      "CO5": { "PSO1": 3, "PSO2": 2, "PSO3": 3 },
-      "CO6": { "PSO1": 3, "PSO2": 3, "PSO3": 2 }
-    },
-    "column_averages": {
-      "PO1": 2.50,
-      "PO2": 2.83,
-      "PO3": 2.80,
-      "PO4": 2.60,
-      "PO5": 1.75,
-      "PO6": 1.00,
-      "PO7": 0.00,
-      "PO8": 0.00,
-      "PO9": 1.00,
-      "PO10": 1.17,
-      "PO11": 1.00,
-      "PO12": 2.50,
-      "PSO1": 3.00,
-      "PSO2": 1.83,
-      "PSO3": 1.83
-    },
-    "mapping_justifications": {
-      "CO1-PO1": "Mathematical induction and asymptotic recurrence analysis form the bedrock of fundamental engineering knowledge.",
-      "CO2-PO3": "Formulating dynamic programming matrices directly exercises solution design for complex constrained engineering systems.",
-      "CO3-PO4": "Investigating network flow bounds against min-cut capacity involves rigorous analytical verification.",
-      "CO4-PO2": "NP-completeness classification enforces deep problem-hardness formulation and mathematical reduction.",
-      "CO5-PO5": "Utilizing approximation algorithms requires software modeling tools and empirical benchmark simulations.",
-      "CO6-PSO1": "Branch-and-bound search synthesis directly delivers core algorithmic software engineering competency."
-    }
-  },
-  "articulationMatrix": {
-    "programOutcomes": {
-      "CO1": { "PO1": 3, "PO2": 2, "PO3": 0, "PO4": 0, "PO5": 0, "PO6": 0, "PO7": 0, "PO8": 0, "PO9": 0, "PO10": 1, "PO11": 0, "PO12": 2 },
-      "CO2": { "PO1": 3, "PO2": 3, "PO3": 3, "PO4": 2, "PO5": 1, "PO6": 0, "PO7": 0, "PO8": 0, "PO9": 0, "PO10": 1, "PO11": 0, "PO12": 2 },
-      "CO3": { "PO1": 2, "PO2": 3, "PO3": 3, "PO4": 3, "PO5": 2, "PO6": 0, "PO7": 0, "PO8": 0, "PO9": 1, "PO10": 1, "PO11": 0, "PO12": 2 },
-      "CO4": { "PO1": 3, "PO2": 3, "PO3": 2, "PO4": 3, "PO5": 0, "PO6": 0, "PO7": 0, "PO8": 0, "PO9": 0, "PO10": 1, "PO11": 0, "PO12": 3 },
-      "CO5": { "PO1": 2, "PO2": 3, "PO3": 3, "PO4": 3, "PO5": 2, "PO6": 1, "PO7": 0, "PO8": 0, "PO9": 1, "PO10": 1, "PO11": 1, "PO12": 3 },
-      "CO6": { "PO1": 2, "PO2": 3, "PO3": 3, "PO4": 2, "PO5": 2, "PO6": 0, "PO7": 0, "PO8": 0, "PO9": 1, "PO10": 2, "PO11": 1, "PO12": 3 }
-    },
-    "programSpecificOutcomes": {
-      "CO1": { "PSO1": 3, "PSO2": 1, "PSO3": 1 },
-      "CO2": { "PSO1": 3, "PSO2": 2, "PSO3": 2 },
-      "CO3": { "PSO1": 3, "PSO2": 2, "PSO3": 2 },
-      "CO4": { "PSO1": 3, "PSO2": 1, "PSO3": 1 },
-      "CO5": { "PSO1": 3, "PSO2": 2, "PSO3": 3 },
-      "CO6": { "PSO1": 3, "PSO2": 3, "PSO3": 2 }
-    },
-    "columnAverages": {
-      "PO1": 2.50,
-      "PO2": 2.83,
-      "PO3": 2.80,
-      "PO4": 2.60,
-      "PO5": 1.75,
-      "PO6": 1.00,
-      "PO7": 0.00,
-      "PO8": 0.00,
-      "PO9": 1.00,
-      "PO10": 1.17,
-      "PO11": 1.00,
-      "PO12": 2.50,
-      "PSO1": 3.00,
-      "PSO2": 1.83,
-      "PSO3": 1.83
-    },
-    "mappingJustifications": {
-      "CO1-PO1": "Mathematical induction and asymptotic recurrence analysis form the bedrock of fundamental engineering knowledge.",
-      "CO2-PO3": "Formulating dynamic programming matrices directly exercises solution design for complex constrained engineering systems.",
-      "CO3-PO4": "Investigating network flow bounds against min-cut capacity involves rigorous analytical verification.",
-      "CO4-PO2": "NP-completeness classification enforces deep problem-hardness formulation and mathematical reduction.",
-      "CO5-PO5": "Utilizing approximation algorithms requires software modeling tools and empirical benchmark simulations.",
-      "CO6-PSO1": "Branch-and-bound search synthesis directly delivers core algorithmic software engineering competency."
-    }
-  },
-  "syllabus_units": [
-    {
-      "unitNumber": 1,
-      "title": "Introduction & Asymptotic Analysis",
-      "lectureHours": 12,
-      "topics": "Order Notation (O, Omega, Theta), Master Theorem, Substitution Method, Recursion Tree, Recurrences, Amortized Analysis (Accounting & Potential Methods).",
-      "pedagogicalMethods": ["Chalk & Talk", "ICT / Interactive Slides", "Mathematical Proof Workshop"],
-      "mappedCOs": ["CO1"]
-    },
-    {
-      "unitNumber": 2,
-      "title": "Divide & Conquer and Greedy Paradigms",
-      "lectureHours": 12,
-      "topics": "Strassen Matrix Multiplication, Convex Hull, Greedy Choice Property, Optimal Substructure, Fractional Knapsack, Huffman Coding, Job Sequencing with Deadlines.",
-      "pedagogicalMethods": ["Chalk & Talk", "Algorithm Visualization Demo", "Peer Code Walkthrough"],
-      "mappedCOs": ["CO2"]
-    },
-    {
-      "unitNumber": 3,
-      "title": "Dynamic Programming & Graph Algorithms",
-      "lectureHours": 12,
-      "topics": "Matrix Chain Multiplication, Longest Common Subsequence (LCS), 0/1 Knapsack, Bellman-Ford, Floyd-Warshall, Johnson Algorithm, Maximum Bipartite Matching, Ford-Fulkerson.",
-      "pedagogicalMethods": ["ICT / Visual Simulation", "Problem-Based Learning Group Activity"],
-      "mappedCOs": ["CO2", "CO3"]
-    },
-    {
-      "unitNumber": 4,
-      "title": "Tractability & NP-Completeness",
-      "lectureHours": 12,
-      "topics": "Deterministic vs Non-deterministic Turing Machines, Polynomial Reductions, Cook-Levin Theorem, Satisfiability (3-SAT), Clique, Vertex Cover, Hamiltonian Cycle, TSP.",
-      "pedagogicalMethods": ["Chalk & Talk", "Case Studies in Intractability", "Socratic Seminar"],
-      "mappedCOs": ["CO4"]
-    },
-    {
-      "unitNumber": 5,
-      "title": "Approximation, Randomized & Branch-and-Bound",
-      "lectureHours": 12,
-      "topics": "Approximation Ratio, Vertex Cover 2-Approximation, Metric TSP, Random Treaps, Quickselect Expected Bounds, Branch and Bound LC-Search, 15-Puzzle Problem, Assignment Problem.",
-      "pedagogicalMethods": ["Interactive Benchmark Coding", "Research Paper Seminar"],
-      "mappedCOs": ["CO5", "CO6"]
-    }
-  ],
-  "syllabusUnits": [
-    {
-      "unitNumber": 1,
-      "title": "Introduction & Asymptotic Analysis",
-      "lectureHours": 12,
-      "topics": "Order Notation (O, Omega, Theta), Master Theorem, Substitution Method, Recursion Tree, Recurrences, Amortized Analysis (Accounting & Potential Methods).",
-      "pedagogicalMethods": ["Chalk & Talk", "ICT / Interactive Slides", "Mathematical Proof Workshop"],
-      "mappedCOs": ["CO1"]
-    },
-    {
-      "unitNumber": 2,
-      "title": "Divide & Conquer and Greedy Paradigms",
-      "lectureHours": 12,
-      "topics": "Strassen Matrix Multiplication, Convex Hull, Greedy Choice Property, Optimal Substructure, Fractional Knapsack, Huffman Coding, Job Sequencing with Deadlines.",
-      "pedagogicalMethods": ["Chalk & Talk", "Algorithm Visualization Demo", "Peer Code Walkthrough"],
-      "mappedCOs": ["CO2"]
-    },
-    {
-      "unitNumber": 3,
-      "title": "Dynamic Programming & Graph Algorithms",
-      "lectureHours": 12,
-      "topics": "Matrix Chain Multiplication, Longest Common Subsequence (LCS), 0/1 Knapsack, Bellman-Ford, Floyd-Warshall, Johnson Algorithm, Maximum Bipartite Matching, Ford-Fulkerson.",
-      "pedagogicalMethods": ["ICT / Visual Simulation", "Problem-Based Learning Group Activity"],
-      "mappedCOs": ["CO2", "CO3"]
-    },
-    {
-      "unitNumber": 4,
-      "title": "Tractability & NP-Completeness",
-      "lectureHours": 12,
-      "topics": "Deterministic vs Non-deterministic Turing Machines, Polynomial Reductions, Cook-Levin Theorem, Satisfiability (3-SAT), Clique, Vertex Cover, Hamiltonian Cycle, TSP.",
-      "pedagogicalMethods": ["Chalk & Talk", "Case Studies in Intractability", "Socratic Seminar"],
-      "mappedCOs": ["CO4"]
-    },
-    {
-      "unitNumber": 5,
-      "title": "Approximation, Randomized & Branch-and-Bound",
-      "lectureHours": 12,
-      "topics": "Approximation Ratio, Vertex Cover 2-Approximation, Metric TSP, Random Treaps, Quickselect Expected Bounds, Branch and Bound LC-Search, 15-Puzzle Problem, Assignment Problem.",
-      "pedagogicalMethods": ["Interactive Benchmark Coding", "Research Paper Seminar"],
-      "mappedCOs": ["CO5", "CO6"]
-    }
-  ],
-  "assessments": [
-    {
-      "category": "CIE",
-      "name": "Continuous Assessment Test 1 (CAT-I)",
-      "weightageMarks": 20,
-      "mappedCOs": ["CO1", "CO2"],
-      "bloomsFocus": ["L2", "L3"]
-    },
-    {
-      "category": "CIE",
-      "name": "Continuous Assessment Test 2 (CAT-II)",
-      "weightageMarks": 20,
-      "mappedCOs": ["CO3", "CO4"],
-      "bloomsFocus": ["L3", "L4"]
-    },
-    {
-      "category": "CIE",
-      "name": "Algorithm Implementation Lab Project & Quiz",
-      "weightageMarks": 10,
-      "mappedCOs": ["CO2", "CO5", "CO6"],
-      "bloomsFocus": ["L4", "L5", "L6"]
-    },
-    {
-      "category": "SEE",
-      "name": "Comprehensive Semester End Examination (SEE)",
-      "weightageMarks": 50,
-      "mappedCOs": ["CO1", "CO2", "CO3", "CO4", "CO5", "CO6"],
-      "bloomsFocus": ["L2", "L3", "L4", "L5", "L6"]
-    }
-  ],
-  "textbooks": [
-    {
-      "authors": "Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein",
-      "title": "Introduction to Algorithms",
-      "edition": "4th Edition",
-      "publisher": "MIT Press",
-      "year": "2022",
-      "isbn": "978-0262046305",
-      "isPrescribed": true
-    },
-    {
-      "authors": "Jon Kleinberg, Éva Tardos",
-      "title": "Algorithm Design",
-      "edition": "1st Edition",
-      "publisher": "Pearson",
-      "year": "2014",
-      "isbn": "978-0321295354",
-      "isPrescribed": true
-    },
-    {
-      "authors": "Ellis Horowitz, Sartaj Sahni, Sanguthevar Rajasekaran",
-      "title": "Fundamentals of Computer Algorithms",
-      "edition": "2nd Edition",
-      "publisher": "Universities Press",
-      "year": "2018",
-      "isbn": "978-8173716126",
-      "isPrescribed": false
-    }
-  ],
-  "accreditation_audit": {
-    "compositeScore": 95,
-    "complianceStatus": "Compliant",
-    "tierLevel": "Tier-1 NBA / ABET Compliant",
-    "higherOrderOutcomePercentage": 66.7,
-    "contactHoursReconciled": true,
-    "assessmentSum100Percent": true,
-    "allUnitsMapped": true,
-    "approvalStatus": "approved"
-  },
+  "schema_version": "1.0.0",
+  "template": "annexure_a",
   "course": {
-    "input_id": "SAMPLE",
     "code": "CS401",
     "title": "Design and Analysis of Algorithms",
     "department": "Computer Science & Engineering",
-    "academicYear": "2025-2026",
-    "semester": "IV",
-    "regulation": "Autonomous R22 / OBE Tier-1",
-    "category": "Professional Core Course (PCC)",
-    "courseCoordinator": "Dr. Evelyn Vasquez",
-    "credits": {
-      "lecture": 3,
-      "tutorial": 1,
-      "practical": 0,
-      "totalCredits": 4,
-      "contactHours": 60
+    "credits_ltp": "3-1-0-4",
+    "course_type": "Professional Core Course (PCC)",
+    "summary": "This course covers asymptotic notations, recurrences, algorithmic design paradigms (divide-and-conquer, greedy, dynamic programming), graph algorithms, complexity hierarchies, and NP-completeness reductions."
+  },
+  "course_outcomes": [
+    {
+      "id": "CO1",
+      "statement": "Explain asymptotic complexity notations, recurrence relations, and algorithmic efficiency models across best, average, and worst-case bounds.",
+      "bloom_level": "L2"
     },
-    "prerequisites": [
-      "CS201 Data Structures",
-      "MA102 Discrete Mathematics"
-    ],
-    "objectives": [
-      "To analyze the asymptotic performance of classical and modern computer algorithms.",
-      "To demonstrate proficiency in applying divide-and-conquer, greedy, and dynamic programming paradigms.",
-      "To synthesize graph-theoretic models for network flow and traversal optimization.",
-      "To understand complexity hierarchies, tractability, and polynomial-time reductions for NP-Complete problems."
-    ],
-    "courseOutcomes": [
-      {
-        "code": "CO1",
-        "bloomsLevel": "L2",
-        "actionVerb": "Explain",
-        "statement": "Explain asymptotic complexity notations, recurrence relations, and algorithmic efficiency models across best, average, and worst-case bounds.",
-        "expectedAttainment": 75,
-        "cognitiveDomain": "Comprehension"
-      },
-      {
-        "code": "CO2",
-        "bloomsLevel": "L3",
-        "actionVerb": "Apply",
-        "statement": "Apply divide-and-conquer, greedy selection, and dynamic programming techniques to solve constrained algorithmic optimization problems.",
-        "expectedAttainment": 70,
-        "cognitiveDomain": "Application"
-      },
-      {
-        "code": "CO3",
-        "bloomsLevel": "L4",
-        "actionVerb": "Analyze",
-        "statement": "Analyze minimum spanning tree, shortest path, and maximum network flow algorithms on sparse and dense graph topologies.",
-        "expectedAttainment": 70,
-        "cognitiveDomain": "Analysis"
-      },
-      {
-        "code": "CO4",
-        "bloomsLevel": "L4",
-        "actionVerb": "Differentiate",
-        "statement": "Differentiate polynomial vs non-deterministic polynomial problem classes (P, NP, NP-Complete) using formal reduction proofs.",
-        "expectedAttainment": 65,
-        "cognitiveDomain": "Analysis"
-      },
-      {
-        "code": "CO5",
-        "bloomsLevel": "L5",
-        "actionVerb": "Evaluate",
-        "statement": "Evaluate randomized and approximation heuristics for computationally intractable NP-hard combinatorial bottlenecks.",
-        "expectedAttainment": 60,
-        "cognitiveDomain": "Evaluation"
-      },
-      {
-        "code": "CO6",
-        "bloomsLevel": "L6",
-        "actionVerb": "Design",
-        "statement": "Design branch-and-bound and state-space search architectures for high-dimensional computational decision systems.",
-        "expectedAttainment": 65,
-        "cognitiveDomain": "Synthesis & Creation"
-      }
-    ],
-    "articulationMatrix": {
-      "programOutcomes": {
-        "CO1": { "PO1": 3, "PO2": 2, "PO3": 0, "PO4": 0, "PO5": 0, "PO6": 0, "PO7": 0, "PO8": 0, "PO9": 0, "PO10": 1, "PO11": 0, "PO12": 2 },
-        "CO2": { "PO1": 3, "PO2": 3, "PO3": 3, "PO4": 2, "PO5": 1, "PO6": 0, "PO7": 0, "PO8": 0, "PO9": 0, "PO10": 1, "PO11": 0, "PO12": 2 },
-        "CO3": { "PO1": 2, "PO2": 3, "PO3": 3, "PO4": 3, "PO5": 2, "PO6": 0, "PO7": 0, "PO8": 0, "PO9": 1, "PO10": 1, "PO11": 0, "PO12": 2 },
-        "CO4": { "PO1": 3, "PO2": 3, "PO3": 2, "PO4": 3, "PO5": 0, "PO6": 0, "PO7": 0, "PO8": 0, "PO9": 0, "PO10": 1, "PO11": 0, "PO12": 3 },
-        "CO5": { "PO1": 2, "PO2": 3, "PO3": 3, "PO4": 3, "PO5": 2, "PO6": 1, "PO7": 0, "PO8": 0, "PO9": 1, "PO10": 1, "PO11": 1, "PO12": 3 },
-        "CO6": { "PO1": 2, "PO2": 3, "PO3": 3, "PO4": 2, "PO5": 2, "PO6": 0, "PO7": 0, "PO8": 0, "PO9": 1, "PO10": 2, "PO11": 1, "PO12": 3 }
-      },
-      "programSpecificOutcomes": {
-        "CO1": { "PSO1": 3, "PSO2": 1, "PSO3": 1 },
-        "CO2": { "PSO1": 3, "PSO2": 2, "PSO3": 2 },
-        "CO3": { "PSO1": 3, "PSO2": 2, "PSO3": 2 },
-        "CO4": { "PSO1": 3, "PSO2": 1, "PSO3": 1 },
-        "CO5": { "PSO1": 3, "PSO2": 2, "PSO3": 3 },
-        "CO6": { "PSO1": 3, "PSO2": 3, "PSO3": 2 }
-      },
-      "columnAverages": {
-        "PO1": 2.50,
-        "PO2": 2.83,
-        "PO3": 2.80,
-        "PO4": 2.60,
-        "PO5": 1.75,
-        "PO6": 1.00,
-        "PO7": 0.00,
-        "PO8": 0.00,
-        "PO9": 1.00,
-        "PO10": 1.17,
-        "PO11": 1.00,
-        "PO12": 2.50,
-        "PSO1": 3.00,
-        "PSO2": 1.83,
-        "PSO3": 1.83
-      },
-      "mappingJustifications": {
-        "CO1-PO1": "Mathematical induction and asymptotic recurrence analysis form the bedrock of fundamental engineering knowledge.",
-        "CO2-PO3": "Formulating dynamic programming matrices directly exercises solution design for complex constrained engineering systems.",
-        "CO3-PO4": "Investigating network flow bounds against min-cut capacity involves rigorous analytical verification.",
-        "CO4-PO2": "NP-completeness classification enforces deep problem-hardness formulation and mathematical reduction.",
-        "CO5-PO5": "Utilizing approximation algorithms requires software modeling tools and empirical benchmark simulations.",
-        "CO6-PSO1": "Branch-and-bound search synthesis directly delivers core algorithmic software engineering competency."
-      }
+    {
+      "id": "CO2",
+      "statement": "Apply divide-and-conquer, greedy selection, and dynamic programming techniques to solve constrained algorithmic optimization problems.",
+      "bloom_level": "L3"
     },
-    "syllabusUnits": [
-      {
-        "unitNumber": 1,
-        "title": "Introduction & Asymptotic Analysis",
-        "lectureHours": 12,
-        "topics": "Order Notation (O, Omega, Theta), Master Theorem, Substitution Method, Recursion Tree, Recurrences, Amortized Analysis (Accounting & Potential Methods).",
-        "pedagogicalMethods": ["Chalk & Talk", "ICT / Interactive Slides", "Mathematical Proof Workshop"],
-        "mappedCOs": ["CO1"]
-      },
-      {
-        "unitNumber": 2,
-        "title": "Divide & Conquer and Greedy Paradigms",
-        "lectureHours": 12,
-        "topics": "Strassen Matrix Multiplication, Convex Hull, Greedy Choice Property, Optimal Substructure, Fractional Knapsack, Huffman Coding, Job Sequencing with Deadlines.",
-        "pedagogicalMethods": ["Chalk & Talk", "Algorithm Visualization Demo", "Peer Code Walkthrough"],
-        "mappedCOs": ["CO2"]
-      },
-      {
-        "unitNumber": 3,
-        "title": "Dynamic Programming & Graph Algorithms",
-        "lectureHours": 12,
-        "topics": "Matrix Chain Multiplication, Longest Common Subsequence (LCS), 0/1 Knapsack, Bellman-Ford, Floyd-Warshall, Johnson Algorithm, Maximum Bipartite Matching, Ford-Fulkerson.",
-        "pedagogicalMethods": ["ICT / Visual Simulation", "Problem-Based Learning Group Activity"],
-        "mappedCOs": ["CO2", "CO3"]
-      },
-      {
-        "unitNumber": 4,
-        "title": "Tractability & NP-Completeness",
-        "lectureHours": 12,
-        "topics": "Deterministic vs Non-deterministic Turing Machines, Polynomial Reductions, Cook-Levin Theorem, Satisfiability (3-SAT), Clique, Vertex Cover, Hamiltonian Cycle, TSP.",
-        "pedagogicalMethods": ["Chalk & Talk", "Case Studies in Intractability", "Socratic Seminar"],
-        "mappedCOs": ["CO4"]
-      },
-      {
-        "unitNumber": 5,
-        "title": "Approximation, Randomized & Branch-and-Bound",
-        "lectureHours": 12,
-        "topics": "Approximation Ratio, Vertex Cover 2-Approximation, Metric TSP, Random Treaps, Quickselect Expected Bounds, Branch and Bound LC-Search, 15-Puzzle Problem, Assignment Problem.",
-        "pedagogicalMethods": ["Interactive Benchmark Coding", "Research Paper Seminar"],
-        "mappedCOs": ["CO5", "CO6"]
-      }
-    ],
-    "assessments": [
-      {
-        "category": "CIE",
-        "name": "Continuous Assessment Test 1 (CAT-I)",
-        "weightageMarks": 20,
-        "mappedCOs": ["CO1", "CO2"],
-        "bloomsFocus": ["L2", "L3"]
-      },
-      {
-        "category": "CIE",
-        "name": "Continuous Assessment Test 2 (CAT-II)",
-        "weightageMarks": 20,
-        "mappedCOs": ["CO3", "CO4"],
-        "bloomsFocus": ["L3", "L4"]
-      },
-      {
-        "category": "CIE",
-        "name": "Algorithm Implementation Lab Project & Quiz",
-        "weightageMarks": 10,
-        "mappedCOs": ["CO2", "CO5", "CO6"],
-        "bloomsFocus": ["L4", "L5", "L6"]
-      },
-      {
-        "category": "SEE",
-        "name": "Comprehensive Semester End Examination (SEE)",
-        "weightageMarks": 50,
-        "mappedCOs": ["CO1", "CO2", "CO3", "CO4", "CO5", "CO6"],
-        "bloomsFocus": ["L2", "L3", "L4", "L5", "L6"]
-      }
-    ],
-    "textbooks": [
-      {
-        "authors": "Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein",
-        "title": "Introduction to Algorithms",
-        "edition": "4th Edition",
-        "publisher": "MIT Press",
-        "year": "2022",
-        "isbn": "978-0262046305",
-        "isPrescribed": true
-      },
-      {
-        "authors": "Jon Kleinberg, Éva Tardos",
-        "title": "Algorithm Design",
-        "edition": "1st Edition",
-        "publisher": "Pearson",
-        "year": "2014",
-        "isbn": "978-0321295354",
-        "isPrescribed": true
-      },
-      {
-        "authors": "Ellis Horowitz, Sartaj Sahni, Sanguthevar Rajasekaran",
-        "title": "Fundamentals of Computer Algorithms",
-        "edition": "2nd Edition",
-        "publisher": "Universities Press",
-        "year": "2018",
-        "isbn": "978-8173716126",
-        "isPrescribed": false
-      }
-    ],
-    "accreditationAudit": {
-      "compositeScore": 95,
-      "complianceStatus": "Compliant",
-      "tierLevel": "Tier-1 NBA / ABET Compliant",
-      "higherOrderOutcomePercentage": 66.7,
-      "contactHoursReconciled": true,
-      "assessmentSum100Percent": true,
-      "allUnitsMapped": true,
-      "approvalStatus": "approved"
+    {
+      "id": "CO3",
+      "statement": "Analyze minimum spanning tree, shortest path, and maximum network flow algorithms on sparse and dense graph topologies.",
+      "bloom_level": "L4"
+    },
+    {
+      "id": "CO4",
+      "statement": "Differentiate polynomial vs non-deterministic polynomial problem classes (P, NP, NP-Complete) using formal reduction proofs.",
+      "bloom_level": "L4"
+    },
+    {
+      "id": "CO5",
+      "statement": "Evaluate randomized and approximation heuristics for computationally intractable NP-hard combinatorial bottlenecks.",
+      "bloom_level": "L5"
+    },
+    {
+      "id": "CO6",
+      "statement": "Design branch-and-bound and state-space search architectures for high-dimensional computational decision systems.",
+      "bloom_level": "L6"
     }
-  }
+  ],
+  "units": [
+    {
+      "unit_number": 1,
+      "title": "Introduction & Asymptotic Analysis",
+      "hours": 12,
+      "topics": "Order Notation (O, Omega, Theta), Master Theorem, Substitution Method, Recursion Tree, Recurrences, Amortized Analysis."
+    },
+    {
+      "unit_number": 2,
+      "title": "Divide & Conquer and Greedy Paradigms",
+      "hours": 12,
+      "topics": "Strassen Matrix Multiplication, Convex Hull, Greedy Choice Property, Optimal Substructure, Fractional Knapsack, Huffman Coding."
+    },
+    {
+      "unit_number": 3,
+      "title": "Dynamic Programming & Graph Algorithms",
+      "hours": 12,
+      "topics": "Matrix Chain Multiplication, Longest Common Subsequence (LCS), 0/1 Knapsack, Bellman-Ford, Floyd-Warshall, Ford-Fulkerson."
+    },
+    {
+      "unit_number": 4,
+      "title": "Tractability & NP-Completeness",
+      "hours": 12,
+      "topics": "Deterministic vs Non-deterministic Turing Machines, Polynomial Reductions, Cook-Levin Theorem, Satisfiability (3-SAT), Clique, Vertex Cover."
+    },
+    {
+      "unit_number": 5,
+      "title": "Approximation, Randomized & Branch-and-Bound",
+      "hours": 12,
+      "topics": "Approximation Ratio, Vertex Cover 2-Approximation, Metric TSP, Random Treaps, Quickselect, Branch and Bound LC-Search, 15-Puzzle Problem."
+    }
+  ],
+  "co_po_pso_map": {
+    "CO1": { "PO1": 3, "PO2": 2, "PO3": 0, "PO4": 0, "PO5": 0, "PO6": 0, "PO7": 0, "PO8": 0, "PO9": 0, "PO10": 1, "PO11": 0, "PO12": 2, "PSO1": 3, "PSO2": 1, "PSO3": 1 },
+    "CO2": { "PO1": 3, "PO2": 3, "PO3": 3, "PO4": 2, "PO5": 1, "PO6": 0, "PO7": 0, "PO8": 0, "PO9": 0, "PO10": 1, "PO11": 0, "PO12": 2, "PSO1": 3, "PSO2": 2, "PSO3": 2 },
+    "CO3": { "PO1": 2, "PO2": 3, "PO3": 3, "PO4": 3, "PO5": 2, "PO6": 0, "PO7": 0, "PO8": 0, "PO9": 1, "PO10": 1, "PO11": 0, "PO12": 2, "PSO1": 3, "PSO2": 2, "PSO3": 2 },
+    "CO4": { "PO1": 3, "PO2": 3, "PO3": 2, "PO4": 3, "PO5": 0, "PO6": 0, "PO7": 0, "PO8": 0, "PO9": 0, "PO10": 1, "PO11": 0, "PO12": 3, "PSO1": 3, "PSO2": 1, "PSO3": 1 },
+    "CO5": { "PO1": 2, "PO2": 3, "PO3": 3, "PO4": 3, "PO5": 2, "PO6": 1, "PO7": 0, "PO8": 0, "PO9": 1, "PO10": 1, "PO11": 1, "PO12": 3, "PSO1": 3, "PSO2": 2, "PSO3": 3 },
+    "CO6": { "PO1": 2, "PO2": 3, "PO3": 3, "PO4": 2, "PO5": 2, "PO6": 0, "PO7": 0, "PO8": 0, "PO9": 1, "PO10": 2, "PO11": 1, "PO12": 3, "PSO1": 3, "PSO2": 3, "PSO3": 2 }
+  },
+  "teaching_hours": 60,
+  "assessment": {
+    "cie": 50,
+    "see": 50,
+    "total": 100
+  },
+  "defects": []
 }
